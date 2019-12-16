@@ -6,7 +6,6 @@ from database_setup import Base, CatalogItem, Category, User
 from flask import session as login_session
 import random
 import string
-
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
 import httplib2
@@ -14,9 +13,7 @@ import json
 from flask import make_response
 import requests
 
-
 app = Flask(__name__)
-
 
 CLIENT_ID = json.loads(
     open('client_secret.json', 'r').read())['web']['client_id']
@@ -268,7 +265,7 @@ def deleteCatalogItem(category_id, catalog_item_id):
 def showLogin():
     state = ''.join(
         random.choice(
-            string.ascii_uppercase + string.digits) for x in xrange(32))
+            string.ascii_uppercase + string.digits) for x in range(32))
     login_session['state'] = state
     return render_template('login.html', STATE=state)
 
