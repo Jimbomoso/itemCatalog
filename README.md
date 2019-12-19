@@ -27,7 +27,7 @@ This program uses third-party auth via Google.
 
 - Install Vagrant and VirtualBox
 - Download Vagrantfile from the Udacity
-- Download this repo into the `catlog/` directory found in the Vagrant directory
+- Download this repo into the `catlog/item-catalog` directory found in the Vagrant directory
 - Run `vagrant up` to run the virtual machine, then `vagrant ssh` to login
 - In the main directory run `sudo pip install -r requirements`
 - Type `python application.py` from within its directory to run the app
