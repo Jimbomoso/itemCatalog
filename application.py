@@ -271,6 +271,7 @@ def showLogin():
 
 # CONNECT - Google login get token
 
+
 @app.route('/gconnect', methods=['POST'])
 def gconnect():
     # Validate state token
