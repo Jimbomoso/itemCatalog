@@ -117,7 +117,7 @@ def editCategory(category_id):
         if request.form['name']:
             editedCategory.name = request.form['name']
             flash(
-                'Category Successfully Edited %s' % editedCategory.name,
+                'Successfully Edited %s' % editedCategory.name,
                 'success')
             return redirect(url_for('showCatalog'))
     else:
@@ -355,9 +355,6 @@ def gconnect():
     output += '<h1>Welcome, '
     output += login_session['username']
     output += '!</h1>'
-    output += '<img src="'
-    output += login_session['picture']
-    output += ' " style = "width: 300px; height: 300px;border-radius: 150px;-webkit-border-radius: 150px;-moz-border-radius: 150px;"> '  # noqa
     flash("you are now logged in as %s" % login_session['username'], 'success')
     print("done!")
     return output
